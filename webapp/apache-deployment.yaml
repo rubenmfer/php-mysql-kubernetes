@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miwebapp
+  namespace: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: miwebapp
+  template:
+    metadata:
+      labels:
+        app: miwebapp
+    spec:
+      containers:
+      - name: mywebapp
+        image: 192.168.49.2:5000/miwebapp:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80

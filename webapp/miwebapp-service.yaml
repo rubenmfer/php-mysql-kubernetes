@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: miwebapp
-  namespace: mysql
+  namespace: miwebapp
 spec:
   selector:
     app: miwebapp

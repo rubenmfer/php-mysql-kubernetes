@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  
         // Insertar datos del formulario en la base de datos MySQL
-        $mysqli = new mysqli("mysql", "my_user", "my_password", "my_database");
+        $mysqli = new mysqli("mysql.mysql.svc.cluster.local", "my_user", "my_password", "my_database");
  
         // Check connection
         if ($mysqli->connect_error) {
